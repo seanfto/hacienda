@@ -1,0 +1,49 @@
+#cloud-config
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAo/VUCjrPHm3XPlKgFt9G5nNvjrV6fuB3iuyv
+dEWzuVg9J3uIBrZ3yqrN2BBUg82tDTJEWBj5rSNzF2OxxDzpf1Uj1JMNB5iaO9zu
+F7cw9GMu8KWmFqK4I1YvjADgY+r7tq636GV9C3svbfydOlUFY0TNxrYa7LkYPnMP
+eoq62FbqnhATKeeXaotIqnYs1HeOtnMJ2ySm5TpqLMWzR7hDWfXociAAxD8BrBFl
+THHU8IZ9KPbv87Z1evy1ovvSP7XPTB9dczqNCLTwWrcG+IasyUohH+HuzLo5afJ+
+JPAeh70PY90nHbbPyU76HJtTwcQj7sPlvxn5sIlN08F1Gt6KnQ
+write_files:
+  - path: /var/lib/rancher/conf/cloud-config.yml
+    permissions: "0644"
+    owner: root
+    content: |
+      #cloud-config
+      ssh_authorized_keys:
+        - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAo/VUCjrPHm3XPlKgFt9G5nNvjrV6fuB3iuyv
+dEWzuVg9J3uIBrZ3yqrN2BBUg82tDTJEWBj5rSNzF2OxxDzpf1Uj1JMNB5iaO9zu
+F7cw9GMu8KWmFqK4I1YvjADgY+r7tq636GV9C3svbfydOlUFY0TNxrYa7LkYPnMP
+eoq62FbqnhATKeeXaotIqnYs1HeOtnMJ2ySm5TpqLMWzR7hDWfXociAAxD8BrBFl
+THHU8IZ9KPbv87Z1evy1ovvSP7XPTB9dczqNCLTwWrcG+IasyUohH+HuzLo5afJ+
+JPAeh70PY90nHbbPyU76HJtTwcQj7sPlvxn5sIlN08F1Gt6KnQxyz
+      rancher:
+        state:
+          dev: LABEL=RANCHER_STATE
+        services_include:
+          ubuntu-console: true
+        network:
+          dns:
+            override: false
+            nameservers:
+              - 8.8.8.8
+              - 8.8.4.4
+          interfaces:
+            eth0:
+              dhcp: true
+rancher:
+  state:
+    dev: LABEL=RANCHER_STATE
+  services_include:
+    ubuntu-console: true
+  network:
+    dns:
+      override: false
+      nameservers:
+        - 8.8.8.8
+        - 8.8.4.4
+    interfaces:
+      eth0:
+        dhcp: true
