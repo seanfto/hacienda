@@ -1,6 +1,6 @@
 #cloud-config
 ssh_authorized_keys:
-  - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAo/VUCjrPHm3XPlKgFt9G5nNvjrV6fuB3iuyvdEWzuVg9J3uIBrZ3yqrN2BBUg82tDTJEWBj5rSNzF2OxxDzpf1Uj1JMNB5iaO9zuF7cw9GMu8KWmFqK4I1YvjADgY+r7tq636GV9C3svbfydOlUFY0TNxrYa7LkYPnMPeoq62FbqnhATKeeXaotIqnYs1HeOtnMJ2ySm5TpqLMWzR7hDWfXociAAxD8BrBFlTHHU8IZ9KPbv87Z1evy1ovvSP7XPTB9dczqNCLTwWrcG+IasyUohH+HuzLo5afJ+JPAeh70PY90nHbbPyU76HJtTwcQj7sPlvxn5sIlN08F1Gt6KnQ
+  - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAo/VUCjrPHm3XPlKgFt9G5nNvjrV6fuB3iuyvdEWzuVg9J3uIBrZ3yqrN2BBUg82tDTJEWBj5rSNzF2OxxDzpf1Uj1JMNB5iaO9zuF7cw9GMu8KWmFqK4I1YvjADgY+r7tq636GV9C3svbfydOlUFY0TNxrYa7LkYPnMPeoq62FbqnhATKeeXaotIqnYs1HeOtnMJ2ySm5TpqLMWzR7hDWfXociAAxD8BrBFlTHHU8IZ9KPbv87Z1evy1ovvSP7XPTB9dczqNCLTwWrcG+IasyUohH+HuzLo5afJ+JPAeh70PY90nHbbPyU76HJtTwcQj7sPlvxn5sIlN08F1Gt6KnQ==
 write_files:
   - path: /var/lib/rancher/conf/cloud-config.yml
     permissions: "0644"
@@ -8,7 +8,8 @@ write_files:
     content: |
       #cloud-config
       ssh_authorized_keys:
-        - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAo/VUCjrPHm3XPlKgFt9G5nNvjrV6fuB3iuyvdEWzuVg9J3uIBrZ3yqrN2BBUg82tDTJEWBj5rSNzF2OxxDzpf1Uj1JMNB5iaO9zuF7cw9GMu8KWmFqK4I1YvjADgY+r7tq636GV9C3svbfydOlUFY0TNxrYa7LkYPnMPeoq62FbqnhATKeeXaotIqnYs1HeOtnMJ2ySm5TpqLMWzR7hDWfXociAAxD8BrBFlTHHU8IZ9KPbv87Z1evy1ovvSP7XPTB9dczqNCLTwWrcG+IasyUohH+HuzLo5afJ+JPAeh70PY90nHbbPyU76HJtTwcQj7sPlvxn5sIlN08F1Gt6KnQ      rancher:
+        - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAo/VUCjrPHm3XPlKgFt9G5nNvjrV6fuB3iuyvdEWzuVg9J3uIBrZ3yqrN2BBUg82tDTJEWBj5rSNzF2OxxDzpf1Uj1JMNB5iaO9zuF7cw9GMu8KWmFqK4I1YvjADgY+r7tq636GV9C3svbfydOlUFY0TNxrYa7LkYPnMPeoq62FbqnhATKeeXaotIqnYs1HeOtnMJ2ySm5TpqLMWzR7hDWfXociAAxD8BrBFlTHHU8IZ9KPbv87Z1evy1ovvSP7XPTB9dczqNCLTwWrcG+IasyUohH+HuzLo5afJ+JPAeh70PY90nHbbPyU76HJtTwcQj7sPlvxn5sIlN08F1Gt6KnQ==
+      rancher:
         state:
           dev: LABEL=RANCHER_STATE
         services_include:
